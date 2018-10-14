@@ -1,0 +1,55 @@
+<!-- POST Requests
+A simple POST request:
+
+/////////////////////////////
+
+Example
+xhttp.open("POST", "demo_post.asp", true);
+xhttp.send();
+To POST data like an HTML form, add an HTTP header with setRequestHeader(). Specify the data you want to send in the send() method:
+
+Example
+xhttp.open("POST", "ajax_test.asp", true);
+xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+xhttp.send("fname=Henry&lname=Ford"); -->
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>The XMLHttpRequest Object</h2>
+
+<button type="button" onclick="loadDoc()">Request data</button>
+
+<p id="demo"></p>
+
+<script>
+function loadDoc() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("demo").innerHTML = this.responseText;
+    }
+  };
+  xhttp.open("POST", "demo_post2.asp", true);
+  xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+  xhttp.send("fname=Henry&lname=Ford");
+}
+</script>
+
+<table>
+  <tr>
+    <th>Method</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>setRequestHeader(header, value)</td>
+    <td>Adds HTTP headers to the request
+
+header: specifies the header name
+value: specifies the header value</td>
+  </tr>
+</table>
+
+</body>
+</html>

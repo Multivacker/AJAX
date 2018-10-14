@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+  <h1>AJAX Example Explained</h1>
+  <h3>HTML Page</h3>
+
+<div id="demo">
+  <h2>Let AJAX change this text</h2>
+  <button type="button" onclick="loadDoc()">Change Content</button>
+</div>
+
+<p>The HTML page contains a div section and a button<br>
+<br>
+The div section is used to display information from a server.<br>
+<br>
+The button calls a function (if it is clicked).<br>
+<br>
+The function requests data from a web server and displays it:</p><br>
+
+<script>
+function loadDoc() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("demo").innerHTML =
+      this.responseText;
+    }
+  };
+  xhttp.open("GET", "ajax_info.txt", true);
+  xhttp.send();
+}
+</script>
+
+</body>
+</html>

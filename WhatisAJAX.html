@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>What is AJAX</title>
+  <style>
+  .note{
+    background-color: lightyellow;
+    width: 800px;
+    height: 50px;
+    text-align: center;
+    padding: 12px;
+  }
+  li{
+    border-style: solid;
+    border-width: 1px;
+  }
+  </style>
+</head>
+<body>
+<p>AJAX = Asynchronous JavaScript And XML.</p>
+<p>AJAX is not a programming language.</p>
+<p>AJAX just uses a combination of:</p>
+<ul>
+  <li>A browser built-in XMLHttpRequest object (to request data from a web server)</li>
+  <li>JavaScript and HTML DOM (to display or use the data)</li>
+</ul>
+<p class="note">AJAX is a misleading name. AJAX applications might use XML to transport data, but it is equally common to transport data as plain text or JSON text.</p>
+
+<p>AJAX allows web pages to be updated asynchronously by exchanging data with a web server behind the scenes. This means that it is possible to update parts of a web page, without reloading the whole page.</p>
+
+<div>
+  <img src="ajaxworks.png"></img>
+</div>
+<ol>
+  <li>An event occurs in a web page (the page is loaded, a button is clicked)</li>
+  <li>An XMLHttpRequest object is created by JavaScript</li>
+  <li>The XMLHttpRequest object sends a request to a web server</li>
+  <li>The server processes the request</li>
+  <li>The server sends a response back to the web page</li>
+  <li>The response is read by JavaScript</li>
+  <li>Proper action (like page update) is performed by JavaScript</li>
+</ol>
+
+</body>
+</html>
